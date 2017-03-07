@@ -1,0 +1,135 @@
+div.member_wrap {
+  min-width: 680px;
+  width: 100%;
+  height: 500px;
+  padding: 0;
+  clear: left;
+}
+
+div.member_wrap ul {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+div.member_wrap ul li.content {
+  list-style: none;
+  float: left;
+  width: 50%;
+  border: 1px solid white;
+  box-sizing: border-box;
+}
+
+div.member_wrap ul li.content div.member_image {
+  width: 100%;
+  height: 1000px;
+}
+
+div.member_wrap ul li.content div.member_image img.member_image_file {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+div.member_wrap ul li.content div#member_content {
+  width: 100%;
+  height: 1000px;
+}
+
+div.member_wrap ul li.content div#member_content div.header {
+  height: 50px;
+  width: 100%;
+  line-height: 50px;
+  text-align: center;
+  font-size: 20px;
+  border-bottom: 1px solid #DED8D6;
+  background-color: #ECDEC5;
+  box-sizing: border-box;
+}
+
+div.member_wrap ul li.content div#member_content ul.member_info {
+  height: 200px;
+  width: 100%;
+  list-style: none;
+}
+
+div.member_wrap ul li.content div#member_content ul.member_info li {
+  height: 25px;
+  text-align: center;
+  line-height: 25px;
+  font-size: 15px;
+  float: left;
+  width: 50%;
+  border-bottom: 1px solid #DED8D6;
+  box-sizing: border-box;
+}
+
+div.member_wrap ul li.content div#member_content ul.member_info .table {
+  background-color: #ED7037;
+  color: white;
+}
+
+div.member_wrap ul li.content div#member_content div.zzal {
+  width: 100%;
+  height: 750px;
+}
+
+div.member_wrap ul li.content div#member_content div.zzal .image_zzal {
+  width: 100%;
+  height: 50%;
+}
+
+div.member_wrap ul li.content div#member_content div.zzal #zzal_1 {
+  background-image: url("../images/sana_zzal_2.gif");
+  background-size: 100% 100%;
+}
+
+div.member_wrap ul li.content div#member_content div.zzal #zzal_2 {
+  background-image: url("../images/sana_zzal_1.gif");
+  background-size: 100% 100%;
+}
+
+div.member_wrap ul li.content #member_youtube {
+  width: 100%;
+  height: 1000px;
+}
+
+div.member_wrap ul li.content #member_youtube .sana_youtube {
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  font-size: 20px;
+  background-color: #F4A065;
+  color: white;
+}
+
+div.member_wrap ul.video_list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  height: 100%;
+  width: 100%;
+}
+
+div.member_wrap ul.video_list li.video_item {
+  float: left;
+  width: 100%;
+  height: 237.5px;
+}
+
+div.member_wrap ul.video_list li.video_item div.item_content {
+  height: 25px;
+  text-align: center;
+  overflow: hidden;
+  font-size: 14px;
+  border: 2px solid white;
+  box-sizing: border-box;
+  background-color: #E0C5EF;
+}
+
+div.member_wrap ul.video_list li.video_item div.item_content a.item_title {
+  text-decoration: none;
+  color: white;
+}

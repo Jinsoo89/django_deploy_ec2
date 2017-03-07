@@ -1,0 +1,25 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>사나</title>
+    <link rel="stylesheet" href="{% static 'css/base_member.css' %}">
+    <link rel="stylesheet" href="{% static 'css/member.css' %}">
+</head>
+<body>
+<div id="wrap">
+    <header class="main-header">
+      <span class="nav-group nav-center">
+        <input type="text">
+          <button type="submit">의 페이지로 바로가기</button>
+      </span>
+    </header>
+</div>
+<div class="content_container">
+    {% block content %}
+    {% endblock %}
+</div>
+</body>
+</html>

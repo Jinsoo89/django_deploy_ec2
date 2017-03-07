@@ -1,0 +1,104 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Twice</title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'css/common.css' %}">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <link rel="stylesheet" href="{% static 'css/header.css' %}">
+</head>
+<body>
+<header>
+    <div id="main_image">
+        <img class="main_twice" src="static/images/twice_main.jpg" alt="">
+    </div>
+</header>
+<div id="members_list">
+    <ul>
+        <li class="btn btn-1"><a class="text_to_link" href="">나연</a></li>
+        <li class="btn btn-2"><a class="text_to_link" href="">정연</a></li>
+        <li class="btn btn-3"><a class="text_to_link" href="">모모</a></li>
+        <li class="btn btn-4"><a class="text_to_link"
+                                 href="{% url 'member:sana' %}">사나</a></li>
+        <li class="btn btn-5"><a class="text_to_link" href="">지효</a></li>
+        <li class="btn btn-6"><a class="text_to_link" href="">미나</a></li>
+        <li class="btn btn-7"><a class="text_to_link" href="">다현</a></li>
+        <li class="btn btn-8"><a class="text_to_link" href="">채영</a></li>
+        <li class="btn btn-9"><a class="text_to_link" href="">쯔위</a></li>
+    </ul>
+</div>
+<div id="albums">
+    <div id="album_wrap">
+        <ul class="album_list">
+            <li class="album" id="background_1"></li>
+            <li class="album_info">
+                <ul class="title_list">
+                    <li class="album_1"><h3 id="album_name">THE STORY
+                        BEGINS</h3></li>
+                    <li class="album_1">1. OOH-AHH하게(우아하게)</li>
+                    <li class="album_1">2. 다시 해줘</li>
+                    <li class="album_1">3. 미쳤나봐</li>
+                    <li class="album_1">4. Truth</li>
+                    <li class="album_1">5. Candy Boy</li>
+                    <li class="album_1">6. Like a Fool</li>
+                </ul>
+            </li>
+            <li class="album" id="background_2"></li>
+            <li class="album_info">
+                <ul class="title_list">
+                    <li class="album_2"><h3 id="album_name">PAGE TWO</h3></li>
+                    <li class="album_2">1. Cheer Up</li>
+                    <li class="album_2">2. 소중한 사랑</li>
+                    <li class="album_2">3. Touchdown</li>
+                    <li class="album_2">4. 툭하면 톡</li>
+                    <li class="album_2">5. Woohoo</li>
+                    <li class="album_2">6. Headphone 써</li>
+                    <li class="album_2">7. I'm gonna be a star (CD Only)</li>
+                </ul>
+            </li>
+            <li class="album" id="background_3"></li>
+            <li class="album_info">
+                <ul class="title_list">
+                    <li class="album_3"><h3 id="album_name">TWICEcoaster:LANE
+                        1</h3></li>
+                    <li class="album_3">1. TT</li>
+                    <li class="album_3">2. TO 10</li>
+                    <li class="album_3">3. PONYTAIL</li>
+                    <li class="album_3">4. JELLY JELLY</li>
+                    <li class="album_3">5. PIT-A-PAT</li>
+                    <li class="album_3">6. NEXT PAGE</li>
+                    <li class="album_3">7. ONE IN A MILLION</li>
+                </ul>
+            </li>
+            <li class="album" id="background_4"></li>
+            <li class="album_info">
+                <ul class="title_list">
+                    <li class="album_4"><h3 id="album_name">TWICEcoaster:LANE
+                        2</h3></li>
+                    <li class="album_4">1. KNOCK KNOCK</li>
+                    <li class="album_4">2. 녹아요</li>
+                    <li class="album_4">3. TT</li>
+                    <li class="album_4">4. 1 TO 10</li>
+                    <li class="album_4">5. PONYTAIL</li>
+                    <li class="album_4">6. JELLY JELLY</li>
+                    <li class="album_4">7. PIT-A-PAT</li>
+                    <li class="album_4">8. NEXT PAGE</li>
+                    <li class="album_4">9. ONE IN A MILLION</li>
+                    <li class="album_4">10. TT (TAK Remix)</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="contents_container">
+    <div class="youtube_header">
+        트와이스 영상모음 - Youtube 조회수 상위 6개
+    </div>
+    {% block content %}
+    {% endblock %}
+</div>
+</body>
+</html>
