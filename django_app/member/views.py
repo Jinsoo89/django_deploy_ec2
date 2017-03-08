@@ -30,6 +30,7 @@ def search_from_youtube(keyword, page_token=None):
 
 
 def sana(request):
+    print('hello')
     videos = []
     context = {
         'videos': videos,

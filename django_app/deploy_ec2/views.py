@@ -1,13 +1,3 @@
-# from django.http import HttpResponse
-#
-#
-# def index(request):
-#     return HttpResponse('''<html>
-#     <body>
-#     <h1>Hello, world!</h1>
-#     </body>
-#     </html>''')
-#
 import json
 
 import requests
@@ -87,4 +77,3 @@ def index(request):
 #
 #     }
 #     return render(request, 'main/index.html', context)
-
