@@ -23,10 +23,14 @@ STATIC_DIR = os.path.join(BASE_DIR, 'static')
 CONFIG_FILE_COMMON = os.path.join(CONF_DIR, 'settings_common.json')
 # settings_local.json의 경로를 CONFIG_FILE에 할당
 CONFIG_FILE = os.path.join(CONF_DIR, 'settings_local.json')
+# settings_deploy.json의 경로를 CONFIG_FILE_DEPLOY에 할당
+CONFIG_FILE_DEPLOY = os.path.join(CONF_DIR, 'settings_deploy.json')
 # CONFIG_FILE_COMMON경로의 파일을 읽어 json.loads()한 결과를 config_common에 할당
 config_common = json.loads(open(CONFIG_FILE_COMMON).read())
 # CONFIG_FILE경로의 파일을 읽어 json.loads()한 결과를 config에 할당
 config = json.loads(open(CONFIG_FILE).read())
+# CONFIG_FILE_DEPLOY경로의 파일을 읽어 json.loads()한 결과를 config_deploy에 할당
+config_deploy = json.loads(open(CONFIG_FILE_DEPLOY).read())
 
 # config_common의 내용을 현재 config에 합침
 for key, key_dict in config_common.items():
@@ -34,7 +38,7 @@ for key, key_dict in config_common.items():
         config[key] = {}
     for inner_key, inner_key_dict in key_dict.items():
         config[key][inner_key] = inner_key_dict
-print(config)
+# print(config)
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
 
@@ -56,7 +60,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'member.apps.MemberConfig'
+    'member.apps.MemberConfig',
 ]
 
 MIDDLEWARE = [
@@ -96,8 +100,12 @@ WSGI_APPLICATION = 'deploy_ec2.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': config["db"]["engine"],
+        'NAME': config["db"]["name"],
+        'USER': config["db"]["user"],
+        'PASSWORD': config["db"]["password"],
+        'HOST': config["db"]["host"],
+        'PORT': config["db"]["port"],
     }
 }
 
@@ -134,8 +142,9 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
-
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
+
 STATICFILES_DIRS = [
     STATIC_DIR,
 ]

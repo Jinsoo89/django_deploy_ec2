@@ -5,15 +5,15 @@
 <head>
     <meta charset="UTF-8">
     <title>Twice</title>
-    <link rel="stylesheet" href="{% static 'css/base.css' %}">
-    <link rel="stylesheet" href="{% static 'css/common.css' %}">
-    <link rel="stylesheet" href="{% static 'css/index.css' %}">
-    <link rel="stylesheet" href="{% static 'css/header.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/common.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
+{#    <link rel="stylesheet" type="text/css" href="{% static 'css/header.css' %}">#}
 </head>
 <body>
 <header>
     <div id="main_image">
-        <img class="main_twice" src="static/images/twice_main.jpg" alt="">
+        <img class="main_twice" src="{% static 'images/twice_main.jpg' %}" alt="">
     </div>
 </header>
 <div id="members_list">
@@ -21,8 +21,7 @@
         <li class="btn btn-1"><a class="text_to_link" href="">나연</a></li>
         <li class="btn btn-2"><a class="text_to_link" href="">정연</a></li>
         <li class="btn btn-3"><a class="text_to_link" href="">모모</a></li>
-        <li class="btn btn-4"><a class="text_to_link"
-                                 href="{% url 'member:sana' %}">사나</a></li>
+        <li class="btn btn-4"><a class="text_to_link" href="{% url 'member:sana' %}">사나</a></li>
         <li class="btn btn-5"><a class="text_to_link" href="">지효</a></li>
         <li class="btn btn-6"><a class="text_to_link" href="">미나</a></li>
         <li class="btn btn-7"><a class="text_to_link" href="">다현</a></li>

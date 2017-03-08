@@ -36,17 +36,17 @@ def sana(request):
     }
     # 포스트일 경우에만 검색결과에 내용이 추가됨
     keyword = '사나'
-    page_token = request.GET.get('page_token')
+    # page_token = request.GET.get('page_token')
 
     if keyword != '':
-        search_result = search_from_youtube(keyword, page_token)
+        search_result = search_from_youtube(keyword)
 
-        next_page_token = search_result.get('nextPageToken')
-        prev_page_token = search_result.get('prevPageToken')
-        total_results = search_result['pageInfo'].get('totalResults')
-        context['next_page_token'] = next_page_token
-        context['prev_page_token'] = prev_page_token
-        context['total_results'] = total_results
+        # next_page_token = search_result.get('nextPageToken')
+        # prev_page_token = search_result.get('prevPageToken')
+        # total_results = search_result['pageInfo'].get('totalResults')
+        # context['next_page_token'] = next_page_token
+        # context['prev_page_token'] = prev_page_token
+        # context['total_results'] = total_results
 
         items = search_result['items']
         for item in items:
