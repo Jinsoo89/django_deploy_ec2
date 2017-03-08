@@ -20,7 +20,14 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ROOT_DIR = os.path.dirname(BASE_DIR)
 CONF_DIR = os.path.join(ROOT_DIR, '.conf-secret')
 TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static_root')
+
+# static settings
+STATIC_URL = '/static/'
 STATIC_DIR = os.path.join(BASE_DIR, 'static')
+STATICFILES_DIRS = [
+    STATIC_DIR,
+]
 
 # settings_common.json을 불러와서 CONFIG_FILE_COMMON에 할당
 CONFIG_FILE_COMMON = os.path.join(CONF_DIR, 'settings_common.json')
@@ -51,7 +58,7 @@ SECRET_KEY = config['django']['secret_key']
 # SECURITY WARNING: don't run with debug turned on in production!
 
 
-ALLOWED_HOSTS = config['django']['secret_key']
+ALLOWED_HOSTS = config['django']['allowed_hosts']
 
 # Application definition
 
@@ -145,9 +152,3 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
-# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-STATIC_URL = '/static/'
-
-STATICFILES_DIRS = [
-    STATIC_DIR,
-]

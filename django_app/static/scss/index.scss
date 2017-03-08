@@ -49,11 +49,10 @@ header {
       border-color: white;
       position: relative;
 
-
       > a.text_to_link {
         position: absolute;
         text-decoration: none;
-        text-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+        text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
         color: white;
         top: 50%;
         left: 50%;
@@ -105,13 +104,11 @@ header {
   }
 }
 
-
 #albums {
   width: 100%;
   height: 800px;
   min-width: 700px;
-
-  background-color: #F5DEE8;
+  background-color: white;
   // background-image: url("../images/twice_album_background.jpeg");
   background-size: 100% 100%;
   border-bottom: 3px solid white;
@@ -154,39 +151,39 @@ header {
           display: inline-block;
           background: transparent;
 
-           li {
-              box-sizing: content-box;
-              width: 100%;
-              font-size: 1.2vw;
+          li {
+            box-sizing: content-box;
+            width: 100%;
+            font-size: 1.2vw;
+            padding: 0;
+
+            > #album_name {
               padding: 0;
-
-              > #album_name {
-                padding: 0;
-                margin-top: 0;
-                // margin-bottom: 0.5px;
-                text-align: center;
-              }
+              margin-top: 0;
+              // margin-bottom: 0.5px;
+              text-align: center;
             }
+          }
 
-            .album_1 {
-              // margin-bottom: 3px;
-              height: (190px/7);
-            }
+          .album_1 {
+            // margin-bottom: 3px;
+            height: (190px/7);
+          }
 
-            .album_2 {
-              // margin-bottom: 2px;
-              height: (190px/8);
-            }
+          .album_2 {
+            // margin-bottom: 2px;
+            height: (190px/8);
+          }
 
-            .album_3 {
-              // margin-bottom: 2px;
-              height: (190px/8);
-            }
+          .album_3 {
+            // margin-bottom: 2px;
+            height: (190px/8);
+          }
 
-            .album_4 {
-              // margin-bottom: 0;
-              height: (190px/11);
-            }
+          .album_4 {
+            // margin-bottom: 0;
+            height: (190px/11);
+          }
         }
       }
     }

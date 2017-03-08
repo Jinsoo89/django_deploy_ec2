@@ -1,6 +1,7 @@
 # Created by https://www.gitignore.io/api/django,python,pycharm,macos
 
 # Custom
+static_root/
 .conf-secret/
 __dev*/
 .idea/
