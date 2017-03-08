@@ -12,6 +12,9 @@ https://docs.djangoproject.com/en/1.10/ref/settings/
 import json
 import os
 
+DEBUG = os.environ.get('MODE') == 'DEBUG'
+print('DEBUG : {}'.format(DEBUG))
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ROOT_DIR = os.path.dirname(BASE_DIR)
@@ -22,7 +25,7 @@ STATIC_DIR = os.path.join(BASE_DIR, 'static')
 # settings_common.json을 불러와서 CONFIG_FILE_COMMON에 할당
 CONFIG_FILE_COMMON = os.path.join(CONF_DIR, 'settings_common.json')
 # settings_local.json의 경로를 CONFIG_FILE에 할당
-CONFIG_FILE = os.path.join(CONF_DIR, 'settings_local.json')
+CONFIG_FILE = os.path.join(CONF_DIR, 'settings_local.json' if DEBUG else 'settings_deploy.json')
 # settings_deploy.json의 경로를 CONFIG_FILE_DEPLOY에 할당
 CONFIG_FILE_DEPLOY = os.path.join(CONF_DIR, 'settings_deploy.json')
 # CONFIG_FILE_COMMON경로의 파일을 읽어 json.loads()한 결과를 config_common에 할당
@@ -46,7 +49,7 @@ for key, key_dict in config_common.items():
 SECRET_KEY = config['django']['secret_key']
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+
 
 ALLOWED_HOSTS = config['django']['secret_key']
 
